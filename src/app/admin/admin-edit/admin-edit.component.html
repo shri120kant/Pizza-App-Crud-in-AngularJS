@@ -1,0 +1,14 @@
+<p>admin-edit works!</p>
+<div class="container">
+    <div class="row" >
+         <input type="text" name="designation" [(ngModel)]="pizza.pizzaId"/>
+         <input type="text" name="designation" [(ngModel)]="pizza.pizzaName"/>
+         <input type="text" name="designation" [(ngModel)]="pizza.price"/>
+         <input type="text" name="designation" [(ngModel)]="pizza.description"/>
+         <input type="text" name="designation" [(ngModel)]="pizza.pizzaVegNonveg"/>
+         <div class="col-md-2">
+             <button (click)="editadminPizza(pizza.pizzaId,pizza.price)">Edit</button>
+         </div>    
+     </div>
+ 
+ </div>

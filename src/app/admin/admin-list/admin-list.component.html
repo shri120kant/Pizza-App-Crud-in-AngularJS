@@ -1,0 +1,36 @@
+<div class='card'>
+    <div class='card-header'>
+            <div class="row">
+                <div class="col-md-11"><h6>Pizza List</h6></div>
+                <p><a routerLink="/admin/addPizza">Add New Pizza</a></p>
+            </div>
+        </div>
+        
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"><h3>Name</h3></div>
+        <div class="col-md-2"><h3>Type</h3></div>
+        <div class="col-md-2"><h3>Price</h3></div>
+        <div class="col-md-2"><h3>Delete</h3></div>
+        <div class="col-md-2"><h3>Edit</h3></div>
+    </div>
+    
+    <div class="row" *ngFor="let pizza of pizzas" (click)="onSelection(pizza)">
+        <div class="col-md-2"><h4>{{pizza.pizzaName}}</h4></div>
+        <div class="col-md-2"><h4>{{pizza.pizzaVegNonveg}}</h4></div>
+        <div class="col-md-2"><h4>{{pizza.price| currency:'INR':'symbol':'1.2-2'}}</h4></div>
+        <div class="col-md-2"><a routerLink="/admin/delete/{{pizza.pizzaId}}">Delete</a></div>
+    <div class="col-md-2">Edit</div>
+    </div>
+    
+    </div>
+
+
+    <div *ngIf="selectedPizza" class="selectedPizza">
+        <app-admin-edit [pizza]="selectedPizza"></app-admin-edit>
+    </div>
+
+</div>
+

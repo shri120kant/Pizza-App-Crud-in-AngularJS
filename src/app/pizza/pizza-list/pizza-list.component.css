@@ -1,0 +1,24 @@
+.card-header{
+    background-color: white ;
+}
+
+.checkout{
+    padding:20px;
+    float: right;
+}
+h6{
+    
+    font-size: 60px;
+    text-align: center;
+    font-style: italic;
+    color: purple;
+    font-family: cursive;
+}
+.col-md-4{
+    text-align: center;
+    font-style: italic;
+    background-color: #ffdb99;
+}
+a{
+    color: black;
+}

@@ -1,0 +1,24 @@
+<div class='card'>
+    <div class='card-header'>
+            <div class="row">
+                <div class="col-md-11"><h6>{{pageTitle}}</h6></div>
+                <div class="col-md-1"><a routerLink="/cart" class="button fancy-button" class="checkout"><i class="material-icons">shopping_cart</i></a>
+            </div>
+        </div>
+        </div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"><h3>Name</h3></div>
+        <div class="col-md-4"><h3>Type</h3></div>
+        <div class="col-md-4"><h3>Price</h3></div>
+    </div>
+    
+    <div class="row" *ngFor="let pizza of pizzas" >
+        <div class="col-md-4"><h4><a routerLink="/pizza/{{pizza.pizzaId}}">{{pizza.pizzaName}}</a></h4></div>
+        <div class="col-md-4"><h4><a routerLink="/pizza/{{pizza.pizzaId}}">{{pizza.pizzaVegNonveg}}</a></h4></div>
+        <div class="col-md-4"><h4><a routerLink="/pizza/{{pizza.pizzaId}}">{{pizza.price| currency:'INR':'symbol':'1.2-2'}}</a></h4></div>
+    </div>
+    
+    </div>
